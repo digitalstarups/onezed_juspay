@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_account"
+        android:title="@string/my_account"
+        android:icon="@drawable/ic_baseline_account_circle_profile"
+        />
+
+<!--    <item-->
+<!--        android:id="@+id/nav_settings"-->
+<!--        android:title="@string/settings"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:icon="@drawable/ic_baseline_settings_24"/>-->
+<!--    <item-->
+<!--        android:id="@+id/nav_language"-->
+<!--        android:title="@string/language"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:icon="@drawable/ic_baseline_language_24"/>-->
+    <item
+        android:id="@+id/nav_support"
+        android:title="@string/support"
+        android:icon="@drawable/ic_baseline_support_agent"/>
+
+<!--    <item-->
+<!--        android:id="@+id/nav_logout"-->
+<!--        android:title="@string/Logout"-->
+<!--        android:fontFamily="sans-serif-medium"-->
+<!--        android:icon="@drawable/ic_baseline_power_settings"/>-->
+</menu>

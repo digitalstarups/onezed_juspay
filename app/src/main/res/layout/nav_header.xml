@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_header_container"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginTop="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:background="@color/red"
+    >
+
+<!--    <ImageView-->
+<!--        android:id="@+id/profile_image"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginStart="18dp"-->
+<!--        android:contentDescription="@string/todo"-->
+<!--        android:src="@drawable/ic_baseline_account_circle_profile"-->
+<!--        app:shapeAppearanceOverlay="@style/CircleImageView"-->
+<!--        />-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_baseline_account_circle_profile"
+        android:elevation="1dp"
+        android:padding="5dp"
+        android:contentDescription="profile_image"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        android:scaleType="center"
+        android:layout_marginStart="5dp"
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/user_details_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/profile_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/user_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

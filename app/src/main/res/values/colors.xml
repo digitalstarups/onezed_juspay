@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_blue">#250E45</color>
+    <color name="grey">#808080</color>
+    <color name="blue">#3629b7</color>
+    <color name="white_ghost">#f9f8fd</color>
+    <color name="red">#FF0000</color>
+    <color name="logo_blue">#250E45</color>
+    <color name="textColor">#250E45</color>
+    <color name="bgColor">#B0DDE2</color>
+    <color name="blue_theme_color">#3968b1</color>
+    <color name="success_green">#157103</color>
+</resources>

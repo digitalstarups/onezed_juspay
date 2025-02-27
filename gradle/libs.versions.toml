@@ -1,0 +1,60 @@
+[versions]
+agp = "8.5.2"
+firebaseAnalyticsKtx = "23.0.7"
+firebaseBom = "33.4.0"
+hypersdkAssetPlugin = "1.0.3"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+juspayHyperSdk = "3.2.12"
+material = "1.12.0"
+activity = "1.9.1"
+constraintlayout = "2.1.4"
+googleGmsGoogleServices = "4.4.2"
+firebaseMessaging = "24.0.1"
+firebaseInappmessagingDisplay = "21.0.0"
+shimmer = "0.5.0"
+carUiLib = "2.6.0"
+juspay = "2.0.7"
+nimbusJoseJwt = "9.31"
+secureComponentUat = "4.1.8"
+barcodeScanning = "17.3.0"
+coreKtx = "1.15.0"
+bcpkixJdk18on = "1.78.1"
+cameraCore = "1.4.1"
+jaxbApi = "2.3.1"
+kotlin = "1.9.0"
+
+[libraries]
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseAnalyticsKtx" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+hypersdk-asset-plugin = { module = "in.juspay:hypersdk-asset-plugin", version.ref = "hypersdkAssetPlugin" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+juspay-hyper-sdk = { module = "in.juspay:juspay-hyper-sdk", version.ref = "juspayHyperSdk" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+firebase-inappmessaging-display = { group = "com.google.firebase", name = "firebase-inappmessaging-display", version.ref = "firebaseInappmessagingDisplay" }
+androidx-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraCore" }
+androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraCore" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanning" }
+nimbus-jose-jwt = { module = "com.nimbusds:nimbus-jose-jwt", version.ref = "nimbusJoseJwt" }
+secure-component-uat = { module = "in.juspay:secure-component-uat", version.ref = "secureComponentUat" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
+car-ui-lib = { group = "com.android.car.ui", name = "car-ui-lib", version.ref = "carUiLib" }
+bcpkix-jdk18on = { module = "org.bouncycastle:bcpkix-jdk18on", version.ref = "bcpkixJdk18on" }
+jaxb-api = { module = "javax.xml.bind:jaxb-api", version.ref = "jaxbApi" }
+androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCore" }
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
+hypersdk = { id = "hypersdk.plugin",version.ref = "juspay"}
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.24" }

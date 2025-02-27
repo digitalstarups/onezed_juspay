@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".Fragment.RecurringDepositBBPS">
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/app_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:background="@color/blue_theme_color"
+    android:elevation="10dp"
+    tools:ignore="MissingConstraints">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:minHeight="?attr/actionBarSize"
+        >
+
+        <ImageView
+            android:id="@+id/btn_back_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="back_image"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/app_bar_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btn_back_img"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:text="Recurring Deposit"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/bbps_img"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/bbps_logo"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:layout_toRightOf="@+id/app_bar_txt"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+<androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/et_recurring_deposit_bbps"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/custom_edit_text_rounded"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:layout_marginTop="10dp"
+    android:drawablePadding="4dp"
+    android:inputType="text"
+    android:hint="Search Recurring Deposit"
+    android:drawableStart="@drawable/ic_baseline_search"
+    android:backgroundTint="@color/white"
+    android:maxLines="1"
+    android:maxLength="15"
+    android:textSize="16sp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:visibility="visible"
+    />
+<ListView
+    android:id="@+id/load_repayment_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:scrollbars="none"
+    android:layout_margin="16dp"
+    android:layout_marginBottom="10dp"
+    app:layout_constraintTop_toBottomOf="@+id/et_recurring_deposit_bbps"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:visibility="visible"/>
+
+    <!-- Get Customer Parameter -->
+    <LinearLayout
+        android:id="@+id/dynamic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toTopOf="@+id/submit_btn"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_btn"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_bg"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+
+    <!--    Screen Third -->
+
+    <ScrollView
+        android:id="@+id/biller_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toTopOf="@+id/pay_btn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="0dp">
+            <LinearLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                >
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/additional_info_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:padding="5dp"
+                />
+            <LinearLayout
+                android:id="@+id/additionalInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                >
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pay_btn"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PAY NOW"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_bg"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

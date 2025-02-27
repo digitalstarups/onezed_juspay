@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group >
+        <item
+            android:id="@+id/my_profile"
+            android:title="@string/my_profile"
+            android:icon="@drawable/ic_baseline_account_circle_profile"
+            />
+
+        <item
+            android:id="@+id/pay_now"
+            android:title="@string/pay_now"
+            android:fontFamily="sans-serif-medium"
+            android:icon="@drawable/ic_baseline_currency_rupee"
+            />
+
+<!--        <item-->
+<!--            android:id="@+id/certificate"-->
+<!--            android:title="@string/certificate"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:icon="@drawable/certificate"-->
+<!--            />-->
+<!--        <item-->
+<!--            android:id="@+id/branding"-->
+<!--            android:title="@string/branding"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:icon="@drawable/branding"-->
+<!--            />-->
+
+
+        <item
+            android:id="@+id/log_out"
+            android:title="@string/logout_txt"
+            android:icon="@drawable/ic_baseline_logout"
+            />
+
+    </group>
+
+</menu>

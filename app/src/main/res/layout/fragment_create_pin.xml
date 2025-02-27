@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="32dp">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:contentDescription="@string/image"
+            android:src="@drawable/onezed_app_logo" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/relative_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.125"
+        tools:ignore="MissingConstraints">
+
+
+        <RelativeLayout
+            android:id="@+id/create_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/create_your_4_digit_pin"
+                android:textColor="@color/logo_blue"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/demo_app_name_txt"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_below="@id/textView"
+                />
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/demo_app_name_txt"
+                android:gravity="center">
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+
+                    tools:ignore="MissingConstraints,UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/relative_layout_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:text="@string/enter_your_pin"
+                                android:textColor="@color/logo_blue"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_right_otp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_right_otp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:passwordToggleEnabled="true">
+
+                            <EditText
+                                android:id="@+id/otp_edit_text1"
+                                android:layout_width="@dimen/et_otp_width"
+                                android:layout_height="@dimen/et_otp_height"
+                                android:layout_marginEnd="@dimen/margin_right_otp"
+                                android:background="@drawable/pin_edit_text"
+                                android:importantForAutofill="no"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:hint=""
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:id="@+id/otp_edit_text2"
+                                android:layout_width="@dimen/et_otp_width"
+                                android:layout_height="@dimen/et_otp_height"
+                                android:layout_marginEnd="@dimen/margin_right_otp"
+                                android:background="@drawable/pin_edit_text"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:hint=""
+                                android:importantForAutofill="no"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                tools:ignore="LabelFor" />
+
+                            <EditText
+                                android:id="@+id/otp_edit_text3"
+                                android:layout_width="@dimen/et_otp_width"
+                                android:layout_height="@dimen/et_otp_height"
+                                android:layout_marginEnd="@dimen/margin_right_otp"
+                                android:background="@drawable/pin_edit_text"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:hint=""
+                                tools:ignore="LabelFor"
+                                android:importantForAutofill="no"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                 />
+
+                            <EditText
+                                android:id="@+id/otp_edit_text4"
+                                android:layout_width="@dimen/et_otp_width"
+                                android:layout_height="@dimen/et_otp_height"
+                                android:background="@drawable/pin_edit_text"
+                                android:hint=""
+                                tools:ignore="LabelFor"
+                                android:importantForAutofill="no"
+                                android:inputType="numberPassword"
+                                android:maxLength="1"
+                                android:textAlignment="center"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:passwordToggleEnabled="true">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:importantForAccessibility="no"
+                                android:layout_marginEnd="@dimen/margin_right_otp" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:importantForAccessibility="no"
+                                android:layout_marginEnd="@dimen/margin_right_otp" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:importantForAccessibility="no"
+                                android:layout_marginEnd="@dimen/margin_right_otp" />
+
+                            <ImageView
+                                android:id="@+id/show_pin_img"
+                                android:layout_width="50dp"
+                                android:layout_height="25dp"
+                                android:importantForAccessibility="no"
+                                android:src="@drawable/ic_remove_red_eye" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r1"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp">
+
+
+                <LinearLayout
+                    android:id="@+id/relative_layout_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="@dimen/margin_right_otp"
+                            android:text="@string/confirm_pin"
+                            android:textColor="@color/logo_blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_right_otp" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_right_otp" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:passwordToggleEnabled="true"
+                        tools:layout_editor_absoluteX="8dp">
+
+
+                        <EditText
+                            android:id="@+id/s_otp_edit_text1"
+                            android:layout_width="@dimen/et_otp_width"
+                            android:layout_height="@dimen/et_otp_height"
+                            android:layout_marginEnd="@dimen/margin_right_otp"
+                            android:background="@drawable/pin_edit_text"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:hint=""
+                            tools:ignore="LabelFor"
+                            android:importantForAutofill="no"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/s_otp_edit_text2"
+                            android:layout_width="@dimen/et_otp_width"
+                            android:layout_height="@dimen/et_otp_height"
+                            android:layout_marginEnd="@dimen/margin_right_otp"
+                            android:background="@drawable/pin_edit_text"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:hint=""
+                            tools:ignore="LabelFor"
+                            android:importantForAutofill="no"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/s_otp_edit_text3"
+                            android:layout_width="@dimen/et_otp_width"
+                            android:layout_height="@dimen/et_otp_height"
+                            android:layout_marginEnd="@dimen/margin_right_otp"
+                            android:background="@drawable/pin_edit_text"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:hint=""
+                            tools:ignore="LabelFor"
+                            android:importantForAutofill="no"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/s_otp_edit_text4"
+                            android:layout_width="@dimen/et_otp_width"
+                            android:layout_height="@dimen/et_otp_height"
+                            android:hint=""
+                            tools:ignore="LabelFor"
+                            android:importantForAutofill="no"
+                            android:background="@drawable/pin_edit_text"
+                            android:inputType="numberPassword"
+                            android:maxLength="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/r2"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_verify"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:elevation="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    />
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

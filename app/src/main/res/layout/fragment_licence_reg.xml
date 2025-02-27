@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/com_reg_layout"
+    android:background="#DAF6FA"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.CompanyRegistrationFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue_theme_color"
+        android:elevation="10dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:minHeight="?attr/actionBarSize"
+            >
+
+            <ImageView
+                android:id="@+id/btn_back_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="back_image"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_back"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/app_bar_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/btn_back_img"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:text="Licence Registration"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/bbps_img"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/bbps_logo"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- First Screen -->
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        android:layout_marginBottom="0dp"
+
+        >
+        <RelativeLayout
+            android:id="@+id/blue_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reacharge_dialog"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/type_of_com_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Types of Licence"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:background="@color/black"
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/card_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/blue_layout"
+
+            >
+            <RelativeLayout
+                android:id="@+id/inner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_start_end_curve"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+
+                >
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3"
+                    android:layout_margin="5dp">
+
+                    <RadioButton
+                        android:id="@+id/licence_reg_central_rb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Reg.(Central Govt.)"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginRight="0dp"/>
+
+                    <RadioButton
+                        android:id="@+id/licence_reg_state_rb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Reg.(State Govt.)"
+                        android:textSize="15sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginRight="0dp"/>
+
+                    <RadioButton
+                        android:id="@+id/licence_reg_othres_rb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Reg.(Others)"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+                </RadioGroup>
+
+                <Spinner
+                    android:id="@+id/licence_spinner"
+                    android:layout_below="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/pin_edit_text"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawableRight="@drawable/baseline_arrow_right"
+                    android:entries="@array/in_house_services_array"
+                    android:drawablePadding="10dp"/>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/licence_reg_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_below="@+id/licence_spinner"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:background="@color/blue_theme_color"
+                        >
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/provide_tab_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="What We Provide"
+                                android:gravity="center"
+                                android:textStyle="normal"
+                                android:textSize="18sp"
+                                android:textColor="@color/white"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/document_tab_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Document Required"
+                                android:gravity="center"
+                                android:textStyle="normal"
+                                android:textSize="18sp"
+                                android:textColor="@color/white"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ScrollView
+                        android:id="@+id/scroll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/tab_layout">
+
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:visibility="gone" />
+
+
+
+                    </ScrollView>
+
+                </RelativeLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/price"
+        android:layout_below="@+id/main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price "
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_layout"
+        app:layout_constraintTop_toBottomOf="@id/main_layout"
+        />
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book An Appointment"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_doc_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Document Upload"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:background="@drawable/button_bg"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

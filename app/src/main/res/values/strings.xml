@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">OneZed</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">SKIP</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="need_an_account">Need an account?</string>
+    <string name="login_signup">Or Login/Signup With</string>
+    <string name="enter_your_number">Enter your number</string>
+    <string name="use_your_paynow_number_don_t_have_one_you_can_register_later">Use your PayNow number. Don\'t have one? You can register later.</string>
+    <string name="welcome_to_onezed">Welcome to OneZed</string>
+    <string name="splash_image">splash image</string>
+    <string name="fingerprint_permission">Did you want to proceed with your Fingerprint ? </string>
+    <string name="logout">This will clear your Login Pin and you need to Login with your Login ID and Password</string>
+    <string name="exit_msg">Do you really want to exit the App?</string>
+    <string name="wrong_pin">Wrong Pin</string>
+    <string name="no_response">Did not get response from Server! Please check your Internet Connection.</string>
+    <string name="enter_confirm_password">Enter Confirm password</string>
+    <string name="user_full_your_name">Enter full your name</string>
+    <string name="enter_user_email">Enter your email</string>
+    <string name="enter_user_phone">Enter your phone</string>
+    <string name="enter_password">Enter password</string>
+
+    <string name="terms_hyperlink">
+<a>Terms and Conditions</a>
+</string>
+    <string name="send">SEND</string>
+    <string name="i_agree_to_the">I agree to the</string>
+    <string name="provided_by_onezed">provided by OneZed.</string>
+    <string name="create_your_4_digit_pin">Create your 4 digit pin</string>
+    <string name="enter_your_pin">Enter your pin</string>
+    <string name="confirm_pin">Confirm Pin</string>
+    <string name="submit">SUBMIT</string>
+    <string name="enter_your_4_digit_login_pin">Enter your 4 digit Login Pin</string>
+    <string name="my_profile">My Profile</string>
+    <string name="logout_txt">Logout</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="support">Support</string>
+    <string name="my_account">My Account</string>
+    <string name="re_enter_your_registered_phone_number">Re-enter your registered phone number</string>
+    <string name="app_logo">app logo</string>
+    <string name="right_arrow">right arrow</string>
+    <string name="business_incorporation">Business Incorporation</string>
+    <string name="licence_amp_registration"><![CDATA[Licence & Registration]]></string>
+    <string name="brand_protection">Brand Protection</string>
+    <string name="accounting_amp_auditing"><![CDATA[Accounting & Auditing]]></string>
+    <string name="efiling_of_returns">Efiling Of Returns</string>
+    <string name="law_matters">Law Matters</string>
+    <string name="description">description</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="pin_one">pin_one</string>
+    <string name="image">image</string>
+    <string name="todo">TODO</string>
+    <string name="enter_otp_send_to_your_mobile_number">Enter OTP send to your mobile number</string>
+    <string name="back_image">back_image</string>
+
+    <string name="search_mobile_number">Search Mobile Number</string>
+    <string name="new_number">New Number</string>
+    <string name="airtel">AIRTEL</string>
+    <string name="select_all_operator">Select All Operator</string>
+    <string name="rs">Rs</string>
+    <string name="validity">Validity: </string>
+    <string name="payment_transaction_failed">Payment Transaction Failed!</string>
+    <string name="payment_failed_message">Getting Server Side Error! If money be deducted from your account will be refund within two business day.</string>
+    <string name="go_back">Go Back</string>
+    <string name="quick_links">Quick Links</string>
+    <string name="mobile_recharge">Mobile \nRecharge"</string>
+    <string name="mobile_recharge_app_bar">Mobile Recharge"</string>
+    <string name="name">Name</string>
+    <string name="select_a_recharge_plan">Select a Recharge Plan</string>
+    <string name="amount">Amount: </string>
+    <string name="details">Details: </string>
+    <string name="continuee">CONTINUE</string>
+    <string name="select_operator">Select Operator</string>
+    <string name="pay_electricity_bill">Electricity \nBill</string>
+    <string name="pay_electricity_bill_app_bar">Pay Electricity Bill</string>
+    <string name="enter_your_consumer_id">Enter your Consumer ID</string>
+    <string name="proceed">PROCEED</string>
+    <string name="search_by_biller_name">Search by biller name</string>
+    <string name="consumer_details">Consumer Details:</string>
+    <string name="consumer_name">Consumer Name :</string>
+    <string name="bill_date">Bill Date :</string>
+    <string name="due_date">Due Date :</string>
+    <string name="bill_cycle">Bill Cycle:</string>
+    <string name="proceed_to_pay">PROCEED TO PAY</string>
+    <string name="broadband_recharge">Broadband \nRecharge</string>
+    <string name="education_fees">Education Fees</string>
+
+
+    <string-array name="in_house_services_array">
+        <item>Service Required</item>
+        <item>Business Incorporation</item>
+        <item>Licence &amp; Certification</item>
+        <item>Brand Protection</item>
+        <item>Accounting &amp; Auditing</item>
+        <item>E-filing Of Returns</item>
+        <item>Law Matters</item>
+        <item>Others Services</item>
+    </string-array>
+    <string-array name="indian_states_array">
+        <item>Select State</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+</resources>

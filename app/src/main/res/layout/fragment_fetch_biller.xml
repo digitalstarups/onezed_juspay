@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F4E7E7"
+    tools:context=".Fragment.FetchBillerFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue_theme_color"
+        android:elevation="10dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:minHeight="?attr/actionBarSize"
+            >
+
+            <ImageView
+                android:id="@+id/btn_back_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/back_image"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_arrow_back"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/app_bar_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/btn_back_img"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:text="@string/pay_electricity_bill_app_bar"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/bbps_img"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/bbps_logo"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Electric Bill Fetch 2   -->
+
+    <RelativeLayout
+        android:id="@+id/consumer_id_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_consumer_id"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_consumer_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_consumer_id"
+                android:inputType="number"
+                android:maxLength="20"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/proceed"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_bg"
+        android:layout_margin="10dp"
+        />
+
+
+    <!-- Electric Bill Fetch 1   -->
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txt_electric_biller"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edit_text_rounded"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="4dp"
+        android:inputType="text"
+        android:hint="@string/search_by_biller_name"
+        android:drawableStart="@drawable/ic_baseline_search"
+        android:backgroundTint="@color/white"
+        android:maxLines="1"
+        android:maxLength="15"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        />
+    <ListView
+        android:id="@+id/elctric_biller_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_electric_biller"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"/>
+
+    <!-- Electric Bill Fetch  3  -->
+
+    <ScrollView
+        android:id="@+id/pay_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/card_view_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintBottom_toTopOf="@+id/btn_procced_to_pay"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:visibility="gone"
+
+        >
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <ImageView
+                android:id="@+id/biller_img"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/bbps_logo"
+                android:layout_marginStart="20dp"
+                />
+            <TextView
+                android:id="@+id/electric_bill_operator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/biller_img"
+                android:text=""
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/customer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@+id/electric_bill_operator"
+                android:layout_toEndOf="@+id/biller_img"
+                android:layout_marginStart="10dp"
+                />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/customer_id"
+                android:background="@color/grey"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/customer_details_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/consumer_details"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_below="@id/view"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/consumer_name"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_below="@+id/customer_details_txt"
+                android:layout_marginStart="20dp"
+                />
+            <TextView
+                android:id="@+id/name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:textAlignment="textEnd"
+                android:layout_below="@+id/customer_details_txt"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/name"
+
+                />
+            <TextView
+                android:id="@+id/bill_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bill_date"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_below="@+id/name_txt"
+                android:layout_marginStart="20dp"
+                />
+            <TextView
+                android:id="@+id/bill_date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/grey"
+                android:textAlignment="textEnd"
+                android:textSize="16sp"
+                android:layout_below="@+id/name_txt"
+                android:layout_toStartOf="@+id/name_txt"
+                android:layout_toEndOf="@+id/bill_date"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentEnd="true"
+                />
+            <TextView
+                android:id="@+id/due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/due_date"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_below="@+id/bill_date_txt"
+                android:layout_marginStart="20dp"
+                />
+            <TextView
+                android:id="@+id/due_date_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="textEnd"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_below="@+id/bill_date_txt"
+                android:layout_toEndOf="@+id/due_date"
+                android:layout_toStartOf="@+id/name_txt"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentEnd="true"
+                />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_below="@+id/due_date_txt"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey"
+                />
+
+            <TextView
+                android:id="@+id/bill_cycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bill_cycle"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/view_2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                />
+
+            <ListView
+                android:id="@+id/elctric_biller_due_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scrollbars="none"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/bill_cycle"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/amount_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bill_cycle"
+                android:layout_margin="10dp"
+                android:background="@drawable/pin_edit_text"
+                android:padding="20dp"
+                android:visibility="gone"
+
+                >
+                <TextView
+                    android:id="@+id/due_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_procced_to_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:text="@string/proceed_to_pay"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

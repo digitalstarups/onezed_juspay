@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.MobileLoginFragment">
+
+
+    <ScrollView
+        android:id="@+id/mobile_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <RelativeLayout
+                android:id="@+id/input_part_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:padding="20dp"
+                tools:ignore="UselessParent">
+                <ImageView
+                    android:id="@+id/logo_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/onezed_app_logo"
+                    android:layout_centerHorizontal="true"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:id="@+id/wlc_txt"
+                    android:layout_below="@+id/logo_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_to_onezed"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    />
+                <TextView
+                    android:id="@+id/msg_txt"
+                    android:layout_below="@id/wlc_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/use_your_paynow_number_don_t_have_one_you_can_register_later"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_number"
+                    android:layout_below="@id/msg_txt"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_enter_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_your_number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_send"
+                    android:layout_below="@+id/til_number"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:background="@drawable/button_bg"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/term_and_condition_ll"
+                    android:layout_below="@id/btn_send"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <CheckBox
+                            android:id="@+id/check_box"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_marginStart="15dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/before_term_and_condition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/i_agree_to_the"
+                            android:textColor="#4A4A4A"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toEndOf="@+id/check_box"
+                            app:layout_constraintTop_toTopOf="@+id/check_box"
+                            android:layout_marginTop="15dp"
+
+                            />
+                        <TextView
+                            android:id="@+id/term_and_condition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:text="@string/terms_hyperlink"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toEndOf="@+id/before_term_and_condition"
+                            app:layout_constraintTop_toTopOf="@+id/before_term_and_condition"
+                            android:textColorLink="@color/textColor"
+                            android:clickable="true"
+                            android:textStyle="bold"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/after_term_and_condition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/provided_by_onezed"
+                            android:textColor="#4A4A4A"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@+id/before_term_and_condition"
+                            app:layout_constraintTop_toBottomOf="@+id/term_and_condition"
+
+
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/sign_up_ll"
+                    android:layout_below="@+id/term_and_condition_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/need_an_account"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/sign_up_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="@string/sign_up"
+                        android:clickable="true"
+                        android:textColor="@color/blue"
+                        android:layout_marginStart="5dp"
+                        />
+                </LinearLayout>
+
+<!--                <TextView-->
+<!--                    android:layout_below="@+id/sign_up_ll"-->
+<!--                    android:id="@+id/forget_password"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/forget_password"-->
+<!--                    android:clickable="true"-->
+<!--                    android:linksClickable="true"-->
+<!--                    android:textColor="@color/blue"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColorLink="@color/blue"-->
+<!--                    android:textColorHint="@color/blue"-->
+
+<!--                    />-->
+
+                <TextView
+                    android:id="@+id/skip_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skip"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/sign_up_ll"
+                    android:gravity="center"
+                    />
+
+
+
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

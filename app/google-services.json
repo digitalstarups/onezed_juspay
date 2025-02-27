@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "232817046513",
+    "project_id": "onezed-32a94",
+    "storage_bucket": "onezed-32a94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232817046513:android:c48ee70601902ebd050a50",
+        "android_client_info": {
+          "package_name": "com.onezed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2WxaeC_QzJya_aXcwbUKDEMYFsZCMq1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

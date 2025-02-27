@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- This layer defines the full shape with no stroke on top -->
+    <item>
+        <shape>
+            <solid android:color="@color/white" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!-- This layer applies the stroke to the left, right, and bottom -->
+    <item android:left="1dp" android:right="1dp" android:bottom="1dp">
+        <shape>
+            <stroke
+                android:width="1dp"
+                android:color="@color/grey" />
+        </shape>
+    </item>
+
+</layer-list>
